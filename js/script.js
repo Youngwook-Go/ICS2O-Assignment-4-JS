@@ -21,30 +21,23 @@ if (navigator.serviceWorker) {
 function update() {
   console.log("update")
   const HST = 13
-  
+
   // size
   const sizeXL = document.getElementById("extra-large").checked
   const sizeL = document.getElementById("large").checked
   const sizeM = document.getElementById("medium").checked
-  console.log("sizeXL : "+sizeXL)
-  console.log("sizeL : "+sizeL)
-  console.log("sizeM : "+sizeM)
+  console.log("sizeXL : " + sizeXL)
+  console.log("sizeL : " + sizeL)
+  console.log("sizeM : " + sizeM)
 
   let size
-  if (sizeXL == true) 
-  {
+  if (sizeXL == true) {
     size = 10
-  } 
-  else if (sizeL == true) 
-  {
+  } else if (sizeL == true) {
     size = 8
-  } 
-  else if (sizeM == true) 
-  {
+  } else if (sizeM == true) {
     size = 6
-  } 
-  else 
-  {
+  } else {
     size = 0
   }
   console.log(size)
@@ -59,10 +52,13 @@ function update() {
   const answer = size + topping + beverage
   console.log("The total price is : " + answer)
   if (isNaN(answer)) {
-     document.getElementById("answer").innerHTML = "Please fill the blank"
+    document.getElementById("answer").innerHTML = "Please fill the blank"
   } else {
-    document.getElementById("answer").innerHTML = "The total price is : " + answer + "."
+    document.getElementById("answer").innerHTML =
+      "The total price is : " + answer + "."
   }
-  
-  console.log("////////////////////////////////////////////////////////////////")
+
+  console.log(
+    "////////////////////////////////////////////////////////////////"
+  )
 }
