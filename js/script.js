@@ -55,7 +55,7 @@ function update() {
     document.getElementById("answer").innerHTML = "Please fill the blank"
   } else {
     document.getElementById("answer").innerHTML =
-      "The total price is : " + answer + "."
+      "The total price is : " + answer + "$"
   }
 
   console.log(
