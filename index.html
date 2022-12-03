@@ -54,97 +54,43 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <!---------- size ---------->
-        <h3>Pick a size of the pizza</h3>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="extra-large"
-        >
-          <input
-            type="radio"
-            id="extra-large"
-            class="mdl-radio__button"
-            name="size"
-            value="10"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">extra large⠀</span>
-        </label>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="large"
-        >
-          <input
-            type="radio"
-            id="large"
-            class="mdl-radio__button"
-            name="size"
-            value="8"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">large⠀</span>
-        </label>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="medium"
-        >
-          <input
-            type="radio"
-            id="medium"
-            class="mdl-radio__button"
-            name="size"
-            value="6"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">medium⠀</span>
-        </label>
-        <!---------- number ---------->
-        <h3>Pick the number of the topping of the pizza</h3>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="1-topping"
-        >
-          <input
-            type="radio"
-            id="1-topping"
-            class="mdl-radio__button"
-            name="number"
-            value="1.00"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">1 topping⠀</span>
-        </label>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="2-topping"
-        >
-          <input
-            type="radio"
-            id="2-topping"
-            class="mdl-radio__button"
-            name="number"
-            value="2.75"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">2 toppings⠀</span>
-        </label>
-        <label
-          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-          for="3-topping"
-        >
-          <input
-            type="radio"
-            id="3-topping"
-            class="mdl-radio__button"
-            name="number"
-            value="3.50"
-            onchange="update()"
-          />
-          <span class="mdl-radio__label">3 toppings⠀</span>
-        </label>
-        <hr style="border-top: 2px solid black" />
-        <p>HST : 13%</p>
-        <div id="answer"><div>
+        <h4>Choose size of the pizza</h4>
+        <form action="#">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="extra-large">
+            <input type="radio" id="extra-large" class="mdl-radio__button" name="size-options"onchange="update()">
+            <span class="mdl-radio__label">extra large⠀</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="large">
+            <input type="radio" id="large" class="mdl-radio__button" name="size-options" onchange="update()">
+            <span class="mdl-radio__label">large⠀</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="medium">
+            <input type="radio" id="medium" class="mdl-radio__button" name="size-options" onchange="update()">
+            <span class="mdl-radio__label">medium⠀</span>
+          </label>
+        </form>
+        <h4><br>Choose number of toppings</h4>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="[0-5]{1}" id="topping-options" onchange="update()">
+            <label class="mdl-textfield__label" for="topping-options">Choose number of topping (0 to 5)</label>
+            <span class="mdl-textfield__error">Input is not a number 0 to 5!</span>
+          </div>
+        </form>
+        <h4>Choose the beverage</h4>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <select class="mdl-textfield__input" id="beverage-options" name="beverage-options" onchange="update()">
+              <option></option>
+              <option value="1">Water</option>
+              <option value="2">Soda</option>
+              <option value="3">Coffie</option>
+              <option value="4">Shake</option>
+            </select>
+            <label class="mdl-textfield__label" for="beverage-options">Choose Beverage</label>
+          </div>
+        </form>
+        <div id="answer"></div>
       </main>
     </div>
   </body>

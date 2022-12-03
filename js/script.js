@@ -20,25 +20,49 @@ if (navigator.serviceWorker) {
 
 function update() {
   console.log("update")
-  // input
-  const extraLarge = document.getElementById("extra-large").checked
-  const large = document.getElementById("large").checked
-  const medium = document.getElementById("medium").checked
-  const oneTopping = document.getElementById("1-topping").checked
-  const twoTopping = document.getElementById("2-topping").checked
-  const threeTopping = document.getElementById("3-topping").checked
+  const HST = 13
+  
+  // size
+  const sizeXL = document.getElementById("extra-large").checked
+  const sizeL = document.getElementById("large").checked
+  const sizeM = document.getElementById("medium").checked
+  console.log("sizeXL : "+sizeXL)
+  console.log("sizeL : "+sizeL)
+  console.log("sizeM : "+sizeM)
 
-  if (extraLarge == true) {
-    console.log("size3")
-    const size = 10
-  } else if (large == true) {
-    const size = 8
-    console.log("size2")
-  } else if (medium == true) {
-    const size = 6
-    console.log("size1")
-  } else {
-    document.getElementById("answer").innerHTML =
-    "Please pick a size of the pizza"
+  let size
+  if (sizeXL == true) 
+  {
+    size = 10
+  } 
+  else if (sizeL == true) 
+  {
+    size = 8
+  } 
+  else if (sizeM == true) 
+  {
+    size = 6
+  } 
+  else 
+  {
+    size = 0
   }
+  console.log(size)
+  // topping
+  const topping = parseInt(document.getElementById("topping-options").value)
+  console.log("topping number : " + topping)
+  // drinks
+  const beverage = parseInt(document.getElementById("beverage-options").value)
+  console.log("Beverage price : " + beverage)
+
+  // output
+  const answer = size + topping + beverage
+  console.log("The total price is : " + answer)
+  if (isNaN(answer)) {
+     document.getElementById("answer").innerHTML = "Please fill the blank"
+  } else {
+    document.getElementById("answer").innerHTML = "The total price is : " + answer + "."
+  }
+  
+  console.log("////////////////////////////////////////////////////////////////")
 }
