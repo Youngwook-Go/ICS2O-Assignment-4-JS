@@ -16,8 +16,6 @@ if (navigator.serviceWorker) {
   })
 }
 
-// function description
-
 function update() {
   console.log("update")
   const HST = 0.13
