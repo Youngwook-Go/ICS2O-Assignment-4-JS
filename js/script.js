@@ -20,7 +20,7 @@ if (navigator.serviceWorker) {
 
 function update() {
   console.log("update")
-  const HST = 13
+  const HST = 0.13
 
   // size
   const sizeXL = document.getElementById("extra-large").checked
@@ -32,11 +32,11 @@ function update() {
 
   let size
   if (sizeXL == true) {
-    size = 10
+    size = 12
   } else if (sizeL == true) {
-    size = 8
+    size = 10
   } else if (sizeM == true) {
-    size = 6
+    size = 8
   } else {
     size = 0
   }
@@ -49,13 +49,16 @@ function update() {
   console.log("Beverage price : " + beverage)
 
   // output
-  const answer = size + topping + beverage
+  const check = (size * topping * beverage)
+  const price = size + topping + beverage
+  const answer = price + (price * HST)
+  console.log("The price is : " + price)
   console.log("The total price is : " + answer)
-  if (isNaN(answer)) {
+  if (isNaN(answer) || check == 0) {
     document.getElementById("answer").innerHTML = "Please fill the blank"
   } else {
     document.getElementById("answer").innerHTML =
-      "The total price is : " + answer + "$"
+      "The total price is : " + answer + " $"
   }
 
   console.log(

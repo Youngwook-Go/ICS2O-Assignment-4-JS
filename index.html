@@ -7,7 +7,7 @@
     <meta name="keywords" content="ICS2O, Assignment, 4, JS" />
     <meta name="author" content="Youngwook" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>GitHub page as PWA template</title>
+    <title>Assignment 4</title>
     <link
       rel="canonical"
       href="https://Youngwook-Go.github.io/ICS2O-Assignment-4-JS/"
@@ -50,7 +50,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+          <span class="mdl-layout-title">Pizza price calculator</span>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -104,15 +104,15 @@
             <input
               class="mdl-textfield__input"
               type="text"
-              pattern="[0-5]{1}"
+              pattern="[1-5]{1}"
               id="topping-options"
               onchange="update()"
             />
             <label class="mdl-textfield__label" for="topping-options"
-              >Choose number of topping (0 to 5)</label
+              >Choose number of topping (1 to 5)</label
             >
             <span class="mdl-textfield__error"
-              >Input is not a number 0 to 5!</span
+              >Input is not a number 1 to 5!</span
             >
           </div>
         </form>
@@ -127,7 +127,7 @@
               name="beverage-options"
               onchange="update()"
             >
-              <option></option>
+              <option value="0"></option>
               <option value="1">Water</option>
               <option value="2">Soda</option>
               <option value="3">Coffie</option>
