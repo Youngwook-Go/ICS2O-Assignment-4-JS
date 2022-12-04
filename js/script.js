@@ -49,9 +49,9 @@ function update() {
   console.log("Beverage price : " + beverage)
 
   // output
-  const check = (size * topping * beverage)
+  const check = size * topping * beverage
   const price = size + topping + beverage
-  const answer = price + (price * HST)
+  const answer = price + price * HST
   console.log("The price is : " + price)
   console.log("The total price is : " + answer)
   if (isNaN(answer) || check == 0) {
